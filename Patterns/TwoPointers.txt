@@ -1,0 +1,51 @@
+When to use it?
+Linear data structures (arrays, lists, strings)
+When you need to scan the start and end of a list
+When you have a sorted list and need to find pair
+Removing duplicates or filtering
+
+nstead of scanning all possible subarrays or substrings, use two pointers i and j at the ends of a string or sorted array to be clever how you increment i or decrement j as you scan the input. This will lower your time complexity from O(N^2) to O(N). In the example above, to detect if a string is a palindrome we scan the ends of the string one character at a time. If the characters are equal, move i and j closer together. If they are not equal, the string is not a palindrome.
+
+def two_pointer_template(input):
+    # Initialize pointers
+    i = 0
+    j = len(input) - 1
+    result = None
+
+    # Iterate while pointers do not cross
+    while i < j:
+        # Process the elements at both pointers
+
+        # Adjust the pointers based on specific conditions
+        # i += 1 or j -= 1
+
+        # Break or continue based on a condition if required
+
+    # Return the final result or process output
+    return result
+
+Valid pallindrome
+
+Input: s = "A man, a plan, a canal: Panama"
+Output: true
+Explanation: "amanaplanacanalpanama" is a palindrome.
+
+def isPallindrome(s):
+left=0
+right=len(s)-1
+while left<right:
+while left<right and not s[left].isalum():
+left+=1
+while left<right and not s[right].isalum():
+right-=1
+  if s[i].lower() != s[j].lower():  # call lower()
+                return False
+
+            i, j = i + 1, j - 1
+
+        return True
+ 
+container with most water
+def maxArea(height):
+
+
