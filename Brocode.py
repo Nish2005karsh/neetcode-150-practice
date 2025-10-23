@@ -84,7 +84,33 @@
 
 #     def getMin(self) -> int:
 #         return self.minStack[-1]
+# Product of array except self
+# Input: nums = [1,2,3,4]
+# Output: [24,12,8,6]
+# def product(nums):
+#    n=len(nums)
+#    left=[1]*n
+# #    [1,1,1,1]
+#    right=[1]*n
+#    ans=[1]*n
+# #    left loop
+#     for i in range(1,n):
+#         left[i]=left[i-1]*nums[i-1]
+#     # Right loop
+#     for i in range(n-2,-1,-1):
+#         right[i]=right[i+1]*nums[i+1]
+#     for i in range(n):
+#         ans[i]=left[i]*right[i]
+      
+     
+     
 
+   
+   
+
+
+
+    
 
 
 
