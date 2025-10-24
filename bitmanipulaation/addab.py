@@ -6,8 +6,4 @@ def add(a,b):
     return a
 a,b=2,3
 print(add(a,b))
-# Complexity is O(1)
-
-
-
-
+# Complexity i

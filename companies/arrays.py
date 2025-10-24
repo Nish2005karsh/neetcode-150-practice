@@ -66,9 +66,33 @@
 #         """
 #         Do not return anything, modify nums1 in-place instead.
 #         """
-        
+# arr1 = [1, 3, 4, 5]
+def thirdMaximum(nums):
+    set_nums=sorted(set(nums))
+    if len(set_nums)<3:
+        return set_nums[-1]
+    else:
+        return set_nums[-3]
+# Leetcode program
+from collections import Counter, defaultdict
 
-    
+class Solution:
+    def majorityGroup(self, s: str) -> str:
+        freq = Counter(s)
+        
+        groups = defaultdict(list)
+        for ch, f in freq.items():
+            groups[f].append(ch)
+        
+        # Find majority group
+        best_k, best_group = -1, []
+        for k, chars in groups.items():
+            if len(chars) > len(best_group) or (len(chars) == len(best_group) and k > best_k):
+                best_k, best_group = k, chars
+        
+        return "".join(best_group)
+
+
 
 
 

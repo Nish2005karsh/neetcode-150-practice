@@ -163,6 +163,25 @@
 # def hammingWeight(n):
 #     return bin(n).count('1')
 # Integer.bitCount() use in java
+# Count bits
+# Example 1:
+# Input: n = 2
+# Output: [0,1,1]
+# Explanation:
+# 0 --> 0
+# 1 --> 1
+# 2 --> 10
+# def countBits(n):
+#     res = [0] * (n + 1)  [0,0,0,0]
+#     for i in range(1, n + 1): i=1,2
+#         res[i] = res[i >> 1] + (i & 1) 
+#     return res
+# def countBits(n):
+#     res = []
+#     for i in range(n + 1):
+#         res.append(bin(i).count('1'))
+#     return res
+
 
 
 

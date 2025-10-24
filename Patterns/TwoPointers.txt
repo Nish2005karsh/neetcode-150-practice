@@ -23,7 +23,7 @@ def two_pointer_template(input):
 
     # Return the final result or process output
     return result
-
+ 
 Valid pallindrome
 
 Input: s = "A man, a plan, a canal: Panama"

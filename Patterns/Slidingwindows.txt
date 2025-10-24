@@ -81,3 +81,29 @@ def window_fixed_size(nums, k):
         i += 1
 
     return result
+
+
+Maximum sum of distinct subarray with length k
+using sliding window
+def maximumDistinctSubarraySum(nums, k):
+    seen = set()
+    left = 0
+    curr_sum = 0
+    max_sum = 0
+
+    for right in range(len(nums)):
+        while nums[right] in seen:
+            seen.remove(nums[left])
+            curr_sum -= nums[left]
+            left += 1
+        seen.add(nums[right])
+        curr_sum += nums[right]
+        # When window size == k
+        if right - left + 1 == k:
+            max_sum = max(max_sum, curr_sum)
+            # shrink window
+            seen.remove(nums[left])
+            curr_sum -= nums[left]
+            left += 1
+
+    return max_sum
