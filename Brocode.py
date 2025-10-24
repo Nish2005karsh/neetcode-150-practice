@@ -143,6 +143,32 @@
 #                     right -= 1
 
 #         return res
+# Bit manipulation
+# Single number
+# nums=[2,2,1] op->1
+# def singleNumber(nums):
+#     xor=0
+#     for num in nums:
+#         xor^=num
+#     return xor 
+# def singleNumber(nums):
+#     seen=set()
+#     for num in nums:
+#         if num in seen:
+#             seen.remove(num)
+#         else:
+#             seen.add(num)
+# Hamming weight
+# n = 11 binary->1011 op->3
+# def hammingWeight(n):
+#     return bin(n).count('1')
+# Integer.bitCount() use in java
+
+
+
+
+   
+
 
     
 
