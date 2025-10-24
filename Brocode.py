@@ -101,8 +101,26 @@
 #         right[i]=right[i+1]*nums[i+1]
 #     for i in range(n):
 #         ans[i]=left[i]*right[i]
-      
-     
+
+# def twoSum2(nums,target):
+#     left=0
+#     right=len(nums)-1
+#     while left<right:
+#         curr_sum=nums[left]+nums[right]
+#         if curr_sum==target:
+#             return [left+1,right+1]
+#         elif curr_sum>target:
+#             right-=1
+#         else:
+#             left+=1
+# nums=[2,7,11,15]
+# target=9
+# print(twoSum2(nums,target))
+def threeSum(nums):
+    if(nums==None or len(nums)<3):
+        return []
+    
+
      
 
    
