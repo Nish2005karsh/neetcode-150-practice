@@ -181,7 +181,98 @@
 #     for i in range(n + 1):
 #         res.append(bin(i).count('1'))
 #     return res
+# import java.util.*;
+# public class Solution {
+#     public int[] countBits(int n) {
+#         int[] res = new int[n + 1]; // create an array of size n+1
+#         for (int i = 0; i <= n; i++) {
+#             res[i] = Integer.bitCount(i); // count number of 1's in binary
+#         }
+#         return res;
+#     }
+#     public static void main(String[] args) {
+#         Solution sol = new Solution();
+#         int n = 5;
+#         int[] result = sol.countBits(n);
+#         System.out.println(Arrays.toString(result)); // [0, 1, 1, 2, 1, 2]
+#     }
+# }
+# Reverse Bits
+# def reverseBits(n):
+#     result=0
+#     for i in range(32):
+#         result<<=1
+#         result|=(n&1)
+#         n>>=1
+#     class Solution {
+#     public int reverseBits(int n) {
+#         int res=0;
+#         for(int i=0;i<32;i++){
+#             int lsb=n&1;
+#             int rev_lsb=lsb<<(31-i);
+#             res=res| rev_lsb;
+#             n=n>>1;
 
+#         }
+#         return res;
+        
+#     }
+# }
+# Missing Number
+# def missingNumber(nums):
+#     n=len(nums)
+#     total=n*(n+1)//2
+#     sum_nums=sum(nums)
+#     return total-sum_nums
+# 2nd method
+# def missingNumber(nums):
+#     missing = len(nums) n=3
+#     for i, num in enumerate(nums): {0:3,1:0,2:1}
+#         missing ^= i ^ num  missing=3^0^3=0  misisng=0^1^0=1 missing=1^2^1=2
+#     return missing
+# Input: nums = [3,0,1]
+# Output: 2
+# class Solution {
+#     public int getSum(int a, int b) {
+#         while(b!=0){
+#             int carry=a & b;
+#             a=a^b;
+#             b=carry<<1;
+
+#         }
+#         return a;
+       
+        
+#     }
+# }
+# Greedy algorithm
+# from typing import List
+# class Solution:
+#     def findContentChildren(self, g: List[int], s: List[int]) -> int:
+#         g.sort()
+#         s.sort()
+#         i = j = 0
+#         while i < len(g) and j < len(s):
+#             if s[j] >= g[i]: 
+#                 i += 1        
+#             j += 1           
+        
+#         return i 
+   
+# Gas station
+# def canCompleteCircuit(gas,cost):
+#     if sum(gas)<sum(cost):
+#         return -1
+#     total=0
+#     res=0
+#     for i in range(len(gas)):
+#         total+=gas[i]-cost[i]
+#         if total < 0:
+#             total=0
+#             res=i+1
+#         return res
+# graph numericals
+# Inorder traversal
 
 
 
