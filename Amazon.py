@@ -75,3 +75,14 @@
 #         for i,num in enumerate(nums):
 #             missing ^= i ^ num
 #         return missing
+# KTHmissing positive number
+# def findkthpositive(arr,k):
+#     left=0
+#     right=len(arr)-1
+#     while left<right:
+#         mid=left+(right-left)//2
+#         if arr[mid]-(mid+1)<k:
+#             left+=mid+1
+#         else:
+#             right=mid
+#         return k+left
